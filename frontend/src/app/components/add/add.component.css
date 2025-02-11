@@ -1,0 +1,52 @@
+div{   
+    padding: 0.7rem;
+    background-color: #f0f8ff76;
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+}
+
+div figure{   
+    position: relative;
+    height: 20vh !important;   
+}
+
+div figure img{
+    height: 20vh;
+    min-width: 37.352vh;
+    z-index: 0;    
+}
+
+div figure a{
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+div figure a svg{
+    fill: #FFF;
+    margin-left: 0.5rem;   
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}   

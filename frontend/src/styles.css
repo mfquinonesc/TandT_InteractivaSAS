@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --app-width: calc(3 * 37.352vh + 4.2rem + 6rem);
+}
+
+* {
+    font-family: "Roboto", serif;
+}
+

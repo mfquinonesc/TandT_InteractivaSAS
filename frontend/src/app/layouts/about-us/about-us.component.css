@@ -1,0 +1,22 @@
+section{
+    min-height: 100vh;
+}
+
+div:first-child{  
+    min-height: 50vh;
+    width: 100%;    
+}
+
+div:first-child h2{
+    color: #d09b48;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+div:first-child p{
+    max-width: var(--app-width);
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
