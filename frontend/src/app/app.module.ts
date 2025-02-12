@@ -9,6 +9,9 @@ import { HeroComponent } from './layouts/hero/hero.component';
 import { AboutUsComponent } from './layouts/about-us/about-us.component';
 import { ImageFocusComponent } from './components/image-focus/image-focus.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ExpirienceComponent } from './layouts/expirience/expirience.component';
+import { CardExperienceComponent } from './components/card-experience/card-experience.component';
+import { ExpPersonalComponent } from './layouts/exp-personal/exp-personal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     AddComponent,
     AboutUsComponent,
     ImageFocusComponent,
-    CarouselComponent
+    CarouselComponent,
+    ExpirienceComponent,
+    CardExperienceComponent,
+    ExpPersonalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+section>div{   
+    min-width: 80%;   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.card-container{   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    min-width: 60vh;
+}
+
+button{
+    margin: 1rem;
+    z-index: 10;
+}

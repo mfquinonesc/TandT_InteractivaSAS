@@ -1,22 +1,22 @@
-div{   
+article{   
     padding: 0.7rem;
     background-color: #f0f8ff76;
     border-radius: 1rem;
     margin: 0 1.5rem;
 }
 
-div figure{   
+article figure{   
     position: relative;
     height: 20vh !important;   
 }
 
-div figure img{
+article figure img{
     height: 20vh;
     min-width: 37.352vh;
     z-index: 0;    
 }
 
-div figure a{
+article figure a{
     position: absolute;
     z-index: 1;
     color: #FFF;
@@ -31,7 +31,7 @@ div figure a{
     font-weight: 600;
 }
 
-div figure a svg{
+article figure a svg{
     fill: #FFF;
     margin-left: 0.5rem;   
 }

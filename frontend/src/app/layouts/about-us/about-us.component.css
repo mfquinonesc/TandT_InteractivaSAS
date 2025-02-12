@@ -7,16 +7,22 @@ div:first-child{
     width: 100%;    
 }
 
-div:first-child h2{
-    color: #d09b48;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 div:first-child p{
     max-width: var(--app-width);
     margin: 0 2rem;
     font-size: 1.5rem;
     text-align: justify;
+}
+
+hr{ 
+    margin-left: calc( 50% - var(--app-width)/2);  
+    max-width: var(--app-width);
+    background: var(--app-p-color);
+}
+
+@media(max-width:1044px){   
+    hr{
+        margin:0 2rem;
+        max-width: 100%;        
+    }   
 }

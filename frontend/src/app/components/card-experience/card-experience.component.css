@@ -1,0 +1,88 @@
+.card-experience{   
+    min-height: 80vh;
+    min-width: 46.3vh;
+    max-width: 46.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--app-p-color);
+    border-radius: 1rem;
+    margin: 0 1rem;
+}
+
+.foot-card{
+    background-color:  var(--app-p-color);
+    padding: 1.25rem 1.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.top-card{
+    height: calc(80vh - 1.25rem - 3rem - 0.25rem);
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.697);
+    background-color: #FFF;
+}
+
+.foot-card a{
+    color: #FFF;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.card-picture{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.card-picture img{
+    width: 100%;
+    height: auto;
+}
+
+.card-picture p{
+    width: 100%;
+    background-color: var(--app-p-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: #FFF;
+    text-align: center;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-content h3{
+    padding: 1rem 0 0 0;
+    color: black;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.card-content h4{
+    padding: 0 0 0.5rem 0;
+    color: var(--app-p-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.card-content p{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0 4rem;
+}

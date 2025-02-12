@@ -1,9 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --app-width: calc(3 * 37.352vh + 4.2rem + 6rem);
+    --app-width-exp: calc(46.3vh * 3 + 2rem);
+    --app-p-color:  #d09b48;
+    --app-s-color:  #FFF;
 }
 
 * {
     font-family: "Roboto", serif;
 }
 
+section{    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+section h2{
+    color: #d09b48;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0 2rem 1rem;   
+    letter-spacing: 1rem;
+    text-align: center;
+}
+
+.app-btn{
+    color: #FFF;
+    padding: 1rem 2.5rem;
+    background-color: #d09b48;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}

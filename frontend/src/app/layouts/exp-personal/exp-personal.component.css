@@ -1,0 +1,27 @@
+.experience{
+    width: 100%;
+    padding: 0 calc(50% - var(--app-width-exp)/2 - 1rem);    
+}
+.experience>div{
+    padding-top: 1rem;   
+}
+.experience div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.experience div>div h3{
+    margin: 2rem 0 1rem 0;
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.experience div>div p{
+    color: black;   
+    font-size: 1.35rem;
+    text-align: justify;
+    font-weight: 200;
+}
