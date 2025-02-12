@@ -1,0 +1,26 @@
+section>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+section>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    margin-left: 10%;
+    margin-top: 5rem;
+    margin-bottom: 5rem; 
+}
+
+section>div>div>a{
+    color: black;
+    font-size: 0.75rem;
+}
+
+figure{
+    width: 15vw;
+}
