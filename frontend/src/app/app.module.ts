@@ -12,6 +12,11 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ExpirienceComponent } from './layouts/expirience/expirience.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
 import { ExpPersonalComponent } from './layouts/exp-personal/exp-personal.component';
+import { CardBlogComponent } from './components/card-blog/card-blog.component';
+import { BlogComponent } from './layouts/blog/blog.component';
+import { FormComponent } from './layouts/form/form.component';
+import { SponsorComponent } from './layouts/sponsor/sponsor.component';
+import { ContactComponent } from './layouts/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { ExpPersonalComponent } from './layouts/exp-personal/exp-personal.compon
     CarouselComponent,
     ExpirienceComponent,
     CardExperienceComponent,
-    ExpPersonalComponent
+    ExpPersonalComponent,
+    CardBlogComponent,
+    BlogComponent,
+    FormComponent,
+    SponsorComponent,
+    ContactComponent,    
   ],
   imports: [
     BrowserModule,

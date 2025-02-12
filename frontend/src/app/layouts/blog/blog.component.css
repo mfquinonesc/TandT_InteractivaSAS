@@ -1,0 +1,15 @@
+section{   
+    background-color: var(--app-p-color);
+}
+
+.blog{
+    width: 100%;
+    padding: 1rem calc(50% - var(--app-width-exp)/2 - 1rem)  4rem  calc(50% - var(--app-width-exp)/2 - 1rem);  
+}
+
+.blog>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+}

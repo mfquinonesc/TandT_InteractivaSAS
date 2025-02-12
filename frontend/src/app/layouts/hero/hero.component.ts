@@ -1,4 +1,5 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Add } from 'src/app/models/add';
 
 @Component({
   selector: 'app-hero',
@@ -7,7 +8,7 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 })
 export class HeroComponent {
 
-  adds: { url: string; text: string }[] = [
+  adds: Add[] = [
     {
       url: '../../../assets/images/viajes_grupales.png',
       text: 'Viajes grupales',

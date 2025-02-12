@@ -1,0 +1,74 @@
+<section>
+    <h2>DISEÑA TU VIAJE</h2>
+    <div class="form-container">
+        <div class="form-msg">
+            <h3>AQUÍ COMIENZA TU EXPERIENCIA</h3>
+            <p>
+                Una vez llenado este formulario, uno de nuestros planners travelers se pondra en
+                contacto contigo para perfeccionar ese viaje que tanto has soñado. Estamos aquí para
+                brindarte la mejor experiencia.
+            </p>
+        </div>
+
+        <div class="form-dest">
+            <div>
+                <label for="">¿CUÁL ES EL DESTINO QUE QUIERES VISITAR?</label>
+                <select name="" id="">                    
+                </select>
+            </div>
+            <div>
+                <label for="">¿QUÉ OTRO DESTINO TIENES EN MENTE?</label>
+                <select name="" id="">
+    
+                </select>
+            </div>
+        </div>
+
+        <div class="form-exp">
+            <label for="">¿QUÉ EXPERIENCIAS QUIERES VIVIR?</label>
+            <button *ngFor="let b of btns">{{b}}</button>
+        </div>
+
+        <div class="form-when" style="padding-bottom: 1rem;">
+            <label class="line-input" for=""> ¿SABES CUÁNDO VIAJAR?</label>
+            <div class="line-input">
+                <label for="">
+                    <input style="margin-left: 0.5rem;" type="radio" name="when" id="">
+                    SI                    
+                 </label>  
+                 <label for="">
+                    <input style="margin-left: 0.5rem;" type="radio" name="when" id=""> 
+                    NO                    
+                 </label>   
+            </div>
+            <div>
+                <label for="">IDA: </label>
+                <input style="margin-left: 0.5rem;" type="datetime" name="" id="">
+            </div>  
+            <div>
+                <label for="">REGRESO: </label>
+                <input style="margin-left: 0.5rem;" type="datetime" name="" id="">
+            </div> 
+        </div>
+
+        <div class="form-when" style="justify-content: flex-start;">
+            <div class="form-when-select">
+                <label for="">NIÑOS: </label>
+                <select style="margin-left: 0.5rem;" id=""></select>
+            </div>  
+            <div class="form-when-select" style="margin-left: 0.5rem;">
+                <label for="">ADULTOS: </label>
+                <select style="margin-left: 0.5rem;" id=""></select>
+            </div> 
+        </div>
+
+        <div class="form-exp">
+            <label for="">TU VIAJE IDEAL.</label>
+            <textarea name="" id=""></textarea>
+        </div>
+
+        <div class="form-send">
+            <button class="app-btn">ENVIAR</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+div{
+    width: 100%;
+    padding: 0 10vw;
+    height: 20vh;
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+figure{
+    width: calc(80% / 7);
+}

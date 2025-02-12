@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Add } from 'src/app/models/add';
 
 @Component({
   selector: 'app-add',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./add.component.css'],
 })
 export class AddComponent {
-  @Input() url: string = '';
-  @Input() text: string = '';
+  @Input() add: Add|null =null;
+ 
 }
 
