@@ -11,3 +11,26 @@ div{
 figure{
     width: calc(80% / 7);
 }
+
+section{
+    position: relative;
+}
+
+section a{
+    position: absolute;
+    top:-5rem;
+    right: 5rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #0000004a;
+}
+
+@media(max-width:1085px){
+    section a{
+        position: absolute;
+        top:-5rem;
+        right: 5rem;
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px #0000004a;
+        width: 4rem;
+    }
+}

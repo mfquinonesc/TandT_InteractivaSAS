@@ -1,29 +1,16 @@
-<section>
-    <h2>EXPERIENCIAS PERSONALIZADAS</h2>
-    <div class="experience">
+<section *ngFor="let exp of experiences">
+    <h2>{{exp.title}}</h2>
+    <div class="container gaps" >
         <div class="columns">
             <div class="column">
                 <figure>
-                    <img src="../../../assets/images/exp_personalizadas.png">
+                    <img [src]="path+exp.image">
                 </figure>
             </div>
             <div class="column is-two-thirds">
-                <h3>¿QUÉ NOS HACE DIFERENTES?</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet
-                    dolore magna aliquam erat volutpat. Ut wisi enim ad
-                    minim veniam, quis nostrud exerci tation ullamcorper
-                    suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate
-                    velit esse molestie consequat, vel illum dolore eu feugiat
-                    nulla facilisis at vero eros et accumsan et iusto odio
-                    dignissim qui blandit praesent luptatum zzril delenit augue
-                    duis dolore te feugait nulla facilisi.
-                </p>
-                <button class="app-btn">
-                    COTIZAR MI VIAJE
-                </button>
+                <h3>{{exp.description}}</h3>
+                <p>{{exp.diference_description}} </p>
+                <button class="app-btn"> COTIZAR MI VIAJE </button>
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Blog } from 'src/app/models/blog';
+import { MediaService } from 'src/app/services/media.service';
 
 @Component({
   selector: 'app-card-blog',
@@ -8,6 +9,11 @@ import { Blog } from 'src/app/models/blog';
 })
 export class CardBlogComponent {
 
- @Input() blog:Blog|null = null;
+  @Input() blog: Blog | null = null;
+  path: string = '';
+
+  constructor(private service: MediaService) {
+    this.path = service.path;
+  }
 
 }

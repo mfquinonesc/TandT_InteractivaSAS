@@ -1,19 +1,16 @@
 <article class="card-experience">
     <div class="top-card">        
         <figure class="card-picture">
-            <img src="../../../assets/images/exp_grupales_1.png" alt="">
-            <p>!ÚLTIMOS CUPOS¡</p>
+            <img [src]="path + travel?.image_cover" alt="">
+            <p [style]="'background-color:'+travel?.status?.color">{{travel?.status?.title}}</p>
         </figure>
         <div class="card-content">
-            <h3>SAFARI ÁFRICA</h3>            
-            <h4>5 AL 15 DE ABRIL | DESDE 5.500 USD</h4>
-            <p>Serengueti, viaje en globo, hotel
-                todo incluido 4 estrellas. Vive la
-                experiencia de conocer los 4 reyes
-                de la sabana africana.</p>            
+            <h3>{{travel?.title}}</h3>            
+            <h4>{{info}}</h4>
+            <p>{{travel?.description}}</p>            
         </div>
     </div>
     <div class="foot-card">
-      <a class="foot-card-link">MÁS INFORMACIÓN</a>
+      <a class="foot-card-link" [href]="travel?.url_front">MÁS INFORMACIÓN</a>
     </div>
 </article>

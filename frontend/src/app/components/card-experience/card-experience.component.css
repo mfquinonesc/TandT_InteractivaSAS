@@ -1,6 +1,5 @@
 .card-experience{   
-    min-height: 80vh;
-    min-width: 46.3vh;
+    min-height: 80vh;    
     max-width: 46.3vh;
     display: flex;
     flex-direction: column;
@@ -63,19 +62,21 @@
 .card-content{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .card-content h3{
-    padding: 1rem 0 0 0;
+    text-align: center;
+    padding:0;
     color: black;
     font-weight: 600;
     font-size: 1.25rem;
 }
 
 .card-content h4{
-    padding: 0 0 0.5rem 0;
+    padding: 0.25rem 0;
     color: var(--app-p-color);
     font-size: 0.75rem;
     font-weight: 600;
@@ -84,5 +85,5 @@
 .card-content p{
     font-size: 0.75rem;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0;
 }

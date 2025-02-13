@@ -1,21 +1,43 @@
-section>div{   
-    min-width: 80%;   
+.column {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;    
 }
 
-.card-container{   
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: fit-content;
-    min-width: 60vh;
+#exp {
+    position: relative; 
+    z-index: 0;
 }
 
-button{
-    margin: 1rem;
-    z-index: 10;
+.cover {
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    width: 100%;
+    height: 5rem;   
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 20;
+}
+
+.mobile{  
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {   
+    margin: 5rem;   
 }

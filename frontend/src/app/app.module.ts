@@ -4,10 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { AddComponent } from './components/add/add.component';
 import { HeroComponent } from './layouts/hero/hero.component';
 import { AboutUsComponent } from './layouts/about-us/about-us.component';
-import { ImageFocusComponent } from './components/image-focus/image-focus.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ExpirienceComponent } from './layouts/expirience/expirience.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
@@ -17,15 +15,15 @@ import { BlogComponent } from './layouts/blog/blog.component';
 import { FormComponent } from './layouts/form/form.component';
 import { SponsorComponent } from './layouts/sponsor/sponsor.component';
 import { ContactComponent } from './layouts/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardCategoryComponent } from './components/card-category/card-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,   
+    FooterComponent,
     HeroComponent,
-    AddComponent,
-    AboutUsComponent,
-    ImageFocusComponent,
+    AboutUsComponent,   
     CarouselComponent,
     ExpirienceComponent,
     CardExperienceComponent,
@@ -35,12 +33,10 @@ import { ContactComponent } from './layouts/contact/contact.component';
     FormComponent,
     SponsorComponent,
     ContactComponent,    
+    CardCategoryComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

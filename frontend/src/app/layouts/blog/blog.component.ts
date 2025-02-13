@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Blog } from 'src/app/models/blog';
+import { MediaService } from 'src/app/services/media.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,21 +8,21 @@ import { Blog } from 'src/app/models/blog';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
-  blogs: Blog []=[
-    {
-      url:'../../../assets/images/blogs_1.png',
-      title:'DESTINOS PARA PAREJAS EN 2025' ,
-      description:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam...',
-    },
-    {
-      url:'../../../assets/images/blogs_2.png',
-      title: 'VUELVE LA VISA PARA VIAJAR A LONDRES',
-      description:'',
-    },
-    {
-      url:'../../../assets/images/blogs_3.png',
-      title:'TOP 3 DESTINOS EN COLOMBIA' ,
-      description:'',
-    },
-  ];
+  
+  path: string = '';
+  blogs: Blog[] = [];
+
+  constructor(private mediaService: MediaService) {
+    this.getBlogs();
+    this.path = this.mediaService.path;
+  }
+
+
+  getBlogs() {
+    this.mediaService.getBlogs().subscribe({
+      next: (value) => {
+        this.blogs = value as Blog[];
+      },
+    });
+  }
 }

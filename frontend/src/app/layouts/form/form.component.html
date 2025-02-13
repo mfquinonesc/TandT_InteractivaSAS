@@ -1,74 +1,125 @@
 <section>
     <h2>DISEÑA TU VIAJE</h2>
-    <div class="form-container">
-        <div class="form-msg">
-            <h3>AQUÍ COMIENZA TU EXPERIENCIA</h3>
-            <p>
-                Una vez llenado este formulario, uno de nuestros planners travelers se pondra en
-                contacto contigo para perfeccionar ese viaje que tanto has soñado. Estamos aquí para
-                brindarte la mejor experiencia.
-            </p>
-        </div>
-
-        <div class="form-dest">
-            <div>
-                <label for="">¿CUÁL ES EL DESTINO QUE QUIERES VISITAR?</label>
-                <select name="" id="">                    
-                </select>
+    <div class="container form">
+        <div class="columns">
+            <div class="column">
+                <div class="field">
+                    <label class="label">¿CUÁL ES EL DESTINO QUE QUIERES VISITAR?</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select>
+                                <option *ngFor="let c of countries">{{ c.name.toUpperCase()+' - '+c.continent.toUpperCase() }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="">¿QUÉ OTRO DESTINO TIENES EN MENTE?</label>
-                <select name="" id="">
-    
-                </select>
+            <div class="column">
+                <div class="field">
+                    <label class="label">¿QUÉ OTRO DESTINO TIENES EN MENTE?</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select>
+                                <option *ngFor="let c of countries">{{ c.name.toUpperCase()+' - '+c.continent.toUpperCase() }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="form-exp">
-            <label for="">¿QUÉ EXPERIENCIAS QUIERES VIVIR?</label>
-            <button *ngFor="let b of btns">{{b}}</button>
-        </div>
-
-        <div class="form-when" style="padding-bottom: 1rem;">
-            <label class="line-input" for=""> ¿SABES CUÁNDO VIAJAR?</label>
-            <div class="line-input">
-                <label for="">
-                    <input style="margin-left: 0.5rem;" type="radio" name="when" id="">
-                    SI                    
-                 </label>  
-                 <label for="">
-                    <input style="margin-left: 0.5rem;" type="radio" name="when" id=""> 
-                    NO                    
-                 </label>   
+        <div class="columns">
+            <div class="column">
+                <label class="label is-fullwidth" for="">¿QUÉ EXPERIENCIAS QUIERES VIVIR?</label>
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="control buttons">
+                        <button class="button" *ngFor="let tag of tags">{{tag.name}}</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="">IDA: </label>
-                <input style="margin-left: 0.5rem;" type="datetime" name="" id="">
-            </div>  
-            <div>
-                <label for="">REGRESO: </label>
-                <input style="margin-left: 0.5rem;" type="datetime" name="" id="">
-            </div> 
         </div>
 
-        <div class="form-when" style="justify-content: flex-start;">
-            <div class="form-when-select">
-                <label for="">NIÑOS: </label>
-                <select style="margin-left: 0.5rem;" id=""></select>
-            </div>  
-            <div class="form-when-select" style="margin-left: 0.5rem;">
-                <label for="">ADULTOS: </label>
-                <select style="margin-left: 0.5rem;" id=""></select>
-            </div> 
+
+        <div class="columns">
+
+            <div class="column info">  
+                
+                <label class="label mr-2"> ¿SABES CUÁNDO VIAJAR? </label>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="radio mr-2">
+                            <input type="radio" name="question">
+                            <strong> SI </strong>
+                        </label>
+                        <label class="radio mr-2">
+                            <input type="radio" name="question">
+                            <strong> NO </strong>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal dates-control">
+                    <label class="label mr-2">IDA: </label>
+                    <div class="control">
+                        <input class="input" type="datetime" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field is-horizontal dates-control">
+                    <label class="label mr-2">REGRESO: </label>
+                    <div class="control">
+                        <input class="input" type="datetime" placeholder="">
+                    </div>
+                </div>             
+
+                <div class="info-buttom">
+                
+                    <div class="field is-horizontal">
+                        <label class="label mr-2">NIÑOS: </label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option *ngFor="let n of numbers">{{n}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="field is-horizontal" style="margin-bottom: 12px;">
+                        <label class="label mr-2">ADULTOS: </label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option *ngFor="let n of numbers">{{n}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+           
         </div>
 
-        <div class="form-exp">
-            <label for="">TU VIAJE IDEAL.</label>
-            <textarea name="" id=""></textarea>
+        <div class="columns">
+            <div class="column">
+                <div class="field">
+                    <label class="label">TU VIAJE IDEAL...</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="columns">
+            <div class="column is-flex is-flex-direction-row is-justify-content-center">
+                <button class="app-btn">ENVIAR</button>
+            </div>
         </div>
 
-        <div class="form-send">
-            <button class="app-btn">ENVIAR</button>
-        </div>
     </div>
 </section>

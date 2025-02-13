@@ -1,122 +1,67 @@
 section {
-    background-color: #e6e6e6;    
+    background-color: #e6e6e6;
     padding-top: 1rem;
 }
 
-.form-container {   
-    padding: 0 20vw;
+.form {
+    padding: 0 15%;   
 }
 
-.form-container label {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.form-container>div {
-    margin: 0;
-    padding: 0 0 2rem 0;
+.form .buttons {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-}
-
-.form-container .form-msg h3 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    padding: 0;
-    margin: 0;
-}
-
-.form-container .form-msg p {
-    text-align: justify;
-    font-size: 1rem;
-}
-
-.form-dest {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
-.form-dest>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: calc(50% - 0.5rem);
+.form .buttons .button {
+    width: 32%;
 }
 
-.form-dest>div select,
-.form-when select {
-    appearance: none;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    outline: none;
-}
-
-.form-when,
-.form-exp {
+.form .info{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;    
-}
-
-.form-exp label{
-    width: 100%;
-}
-
-.form-exp button {
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1.25rem;
-    width: calc(33.33% - 0.5rem);
-    height: 2.5rem;
-    margin: 0.5rem 0;
-    color: #e6e6e6;
-    font-weight: 600;
-}
-
-.form-when input[type="datetime"]{   
-    padding: 10px;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    cursor: pointer;
-}
-
-.form-container .line-input{   
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 0.25rem;   
 }
 
-.form-when-select{
+.form .dates-control{  
+    width: fit-content;
+}
+
+.form .dates-control > div{
+    width: 8vw;
+}
+
+.form .info .info-buttom{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    width: 15vw;
-}
-.form-exp textarea{
-    width: 100%;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    height: 7rem;
+    align-items: center;   
 }
 
-.form-send{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.form .info .info-buttom> div:last-child{
+    margin-left: 1rem;
 }
+
+
+@media(max-width:881px) {
+    .form .buttons .button {
+        width: 100%;
+    }  
+    
+    .form .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .form .dates-control,
+    .form .dates-control > div{
+        width: 100%;
+    }
+
+    .form .info-buttom{
+        width: 100%;
+    }
+}
+

@@ -1,42 +1,50 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Add } from 'src/app/models/add';
+import { Banner } from 'src/app/models/banner';
+import { Category } from 'src/app/models/category';
+import { MediaService } from 'src/app/services/media.service';
+import { MobileHandler } from 'src/app/utilities/mobile-handler';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
 })
-export class HeroComponent {
+export class HeroComponent extends MobileHandler {
 
-  adds: Add[] = [
-    {
-      url: '../../../assets/images/viajes_grupales.png',
-      text: 'Viajes grupales',
-    },
-    {
-      url: '../../../assets/images/viajes_a_la_medida.png',
-      text: 'Viajes a la medida',
-    },
-    {
-      url: '../../../assets/images/destinos_para_parejas.png',
-      text: 'Destinos para parejas',
-    },
-  ];
+  categories: Category[] = [];
+  banners: Banner[] = [];
+  path: string = '';
+  title: string = '';
+  urlBg: string = '';
 
-  isMobile: boolean = window.innerWidth <= 1023;
-
-  index: number = 0;
+  constructor(private mediaService: MediaService) {
+    super();
+    this.getCategories();
+    this.getBanners();
+    this.path = this.mediaService.path;
+  }
 
   @HostListener('window:resize')
-  onResize() {
-    this.isMobile = window.innerWidth <= 1023;   
+  override onResize() {
+    super.onResize()
+  }
+
+  getBanners() {
+    this.mediaService.getBanners().subscribe({
+      next: (value) => {
+        this.banners = value as Banner[];
+        this.title = this.banners[0].title;
+        this.urlBg = this.path + this.banners[0].image;
+      },
+    });
+  }
+
+  getCategories() {
+    this.mediaService.getCategories().subscribe({
+      next: (value) => {
+        this.categories = value as Category[];
+        this.length = this.categories.length;        
+      },
+    });
   } 
- 
-  goForward() {
-    this.index = (this.index + 1) % this.adds.length;    
-  }
-  
-  goBackward() {
-    this.index = this.index == 0 ? this.adds.length - 1 : this.index - 1;    
-  }
 }

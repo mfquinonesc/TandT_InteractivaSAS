@@ -1,12 +1,12 @@
-<article>
+<article style="margin-top: 1rem;">
     <figure class="card-picture">
-        <img [src]="blog?.url">
+        <img [src]="path + blog?.image_cover">
     </figure>
     <div class="card-content">
         <h3>{{blog?.title}}</h3>
         <p> {{blog?.description}} </p>
     </div>
     <div class="card-foot">
-        <a>LEER MÁS</a>
+        <a [href]="blog?.url_front">LEER MÁS</a>
     </div>
 </article>
