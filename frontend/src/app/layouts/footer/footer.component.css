@@ -24,3 +24,8 @@ figure{
     min-width: 15rem;
     width: 15vw;
 }
+
+span img{
+    width: 0.5rem;
+    margin: 0 0.25rem;
+}
